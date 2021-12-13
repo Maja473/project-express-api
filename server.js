@@ -23,7 +23,7 @@ app.use(express.json())
 
 // Start defining your routes here
 app.get('/', (req, res) => {
-  res.send('Start')
+  res.send('This is a wip project, type /books to fetch all the data provided. Will code in more endpoints')
 })
 
 //fetches all the data of the books
