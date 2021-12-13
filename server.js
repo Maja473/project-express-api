@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-
+import booksData from './data/books.json'
 // If you're using one of our datasets, uncomment the appropriate import below
 // to get started!
 // 
@@ -23,8 +23,18 @@ app.use(express.json())
 
 // Start defining your routes here
 app.get('/', (req, res) => {
-  res.send('Hello world')
+  res.send('Start')
 })
+
+//fetches all the data of the books
+app.get ('/books', (req, res) => {
+  res.json(booksData)
+})
+
+app.get ('/ratings', (req, res) => {
+  
+})
+
 
 // Start the server
 app.listen(port, () => {
